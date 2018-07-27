@@ -1,0 +1,330 @@
+/* *******************************
+            BASE
+******************************** */
+
+html {
+  font-size: $font-size-base;
+  font-family: $font-default;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-title;
+  font-weight: normal;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* *******************************
+            HEADER
+******************************** */
+
+.burger {
+  display: flex;
+  justify-content: right;
+  float: right;
+  margin-right: 20px;
+  margin-top: 20px;
+  .fa {
+    font-size: 3rem;
+  }
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.fa::before {
+  color: white;
+}
+
+header {
+  background: url(../images/image-costa-rica-11\ copie.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  min-height: 50vh;
+  
+}
+
+.header-logo {
+  .logo {
+    margin: auto;
+    margin-top: 50px;
+    opacity: 85%;
+    width: 70%;
+  }
+}
+
+.main-nav {
+  display: none;
+}
+
+.rs {
+  display: flex;
+  justify-content: center;
+  margin:25px 25px;
+  a {
+    display: block;
+    margin: 0 1rem;
+  }
+}
+
+/* *******************************
+            MAIN
+******************************** */
+
+//s1
+.main-1 {
+  background: rgba(255, 255, 255, 1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 14%, rgba(199, 178, 153, 1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(14%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(199, 178, 153, 1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 14%, rgba(199, 178, 153, 1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 14%, rgba(199, 178, 153, 1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 14%, rgba(199, 178, 153, 1) 100%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 14%, rgba(199, 178, 153, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c7b299', GradientType=1);
+  padding: 10px 10px;
+}
+
+.t-center {
+  text-align: center;
+}
+
+h2 {
+  border: $vert-fonce 2px solid;
+  border-radius: 15px;
+  box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.300);
+  color: $vert-fonce;
+  display: inline-block;
+  font-size: 15px;
+  margin: 50px 60px 30px;
+  padding: 10px;
+  text-align: center;
+}
+
+.block {
+  background: $blanc;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  text-align: center;
+  h3 {   
+    background: $blanc;
+    border: $beige 2px solid;
+    border-radius: 15px;
+    box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.300);
+    color: $beige;
+    display: inline-block;   
+    margin: 0;
+    padding: 0.5rem 40px; //taille du bloc h3 en largeur
+    text-align: center;
+  }
+  p {
+    text-align: left;
+  }
+}
+
+.main-1-text {
+  color: $gris-fonce;
+  padding: 20px;
+}
+
+.picto {
+  display: none;
+}
+
+//s2
+.item-container {
+  p {
+    color: $vert-fonce;
+  }
+}
+
+.cta {
+  background: rgba(210, 214, 210, 1);
+  background: -moz-linear-gradient(top, rgba(210, 214, 210, 1) 0%, rgba(210, 214, 210, 1) 9%, rgba(13, 84, 4, 1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(210, 214, 210, 1)), color-stop(9%, rgba(210, 214, 210, 1)), color-stop(100%, rgba(13, 84, 4, 1)));
+  background: -webkit-linear-gradient(top, rgba(210, 214, 210, 1) 0%, rgba(210, 214, 210, 1) 9%, rgba(13, 84, 4, 1) 100%);
+  background: -o-linear-gradient(top, rgba(210, 214, 210, 1) 0%, rgba(210, 214, 210, 1) 9%, rgba(13, 84, 4, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(210, 214, 210, 1) 0%, rgba(210, 214, 210, 1) 9%, rgba(13, 84, 4, 1) 100%);
+  background: linear-gradient(to bottom, rgba(210, 214, 210, 1) 0%, rgba(210, 214, 210, 1) 9%, rgba(13, 84, 4, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2d6d2', endColorstr='#0d5404', GradientType=0);
+  border-radius: 15px;
+  color: $blanc;
+  margin: 0 auto;
+  padding: 0 20px 0 20px;
+}
+
+.bon-plan {
+  display: block;
+  width: 100%;
+  h2 {
+    margin: 2.85rem auto;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.2rem;
+    width: 70%;
+  }
+  .bon-plan-contenu {
+    background: rgba(255, 255, 255, 1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 14%, rgba(199, 178, 153, 1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(14%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(199, 178, 153, 1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 14%, rgba(199, 178, 153, 1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 14%, rgba(199, 178, 153, 1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 14%, rgba(199, 178, 153, 1) 100%);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 14%, rgba(199, 178, 153, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c7b299', GradientType=1);
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    a {
+      background: rgba(210, 214, 210, 1);
+      background: -moz-linear-gradient(top, rgba(210, 214, 210, 1) 0%, rgba(210, 214, 210, 1) 9%, rgba(13, 84, 4, 1) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(210, 214, 210, 1)), color-stop(9%, rgba(210, 214, 210, 1)), color-stop(100%, rgba(13, 84, 4, 1)));
+      background: -webkit-linear-gradient(top, rgba(210, 214, 210, 1) 0%, rgba(210, 214, 210, 1) 9%, rgba(13, 84, 4, 1) 100%);
+      background: -o-linear-gradient(top, rgba(210, 214, 210, 1) 0%, rgba(210, 214, 210, 1) 9%, rgba(13, 84, 4, 1) 100%);
+      background: -ms-linear-gradient(top, rgba(210, 214, 210, 1) 0%, rgba(210, 214, 210, 1) 9%, rgba(13, 84, 4, 1) 100%);
+      background: linear-gradient(to bottom, rgba(210, 214, 210, 1) 0%, rgba(210, 214, 210, 1) 9%, rgba(13, 84, 4, 1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2d6d2', endColorstr='#0d5404', GradientType=0);
+      border-radius: 15px;
+      color: $blanc;
+      margin: 2.85rem auto;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 0.2rem;
+      width: 70%;
+    }
+    .bon-plan-contenu_bloc {
+      display: flex;
+      flex-flow: column wrap;
+      padding: 0 0.2rem;
+      width: 50%;
+      h3 {
+        background-color: $vert-fonce;
+        border-radius: 15px;
+        color: $blanc;
+        text-align: center;
+      }
+      p {
+        background: $blanc;
+        border-radius: 0 0 15px 15px;
+        color: $vert-fonce;
+        font-size: 15px;
+        margin: 0;
+        padding: 0.4rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+
+/* *******************************
+            FOOTER
+******************************** */
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1em 0;
+  width: 100%;
+  .logo-footer {
+    margin: 15px auto;
+    width: 40%;
+    img {
+      width: 80%;
+    }
+  }
+  .footer-rs {
+    width: 60%;
+    .footer-rs-2 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      a {
+        margin: 0.5rem 0 0;
+        padding: 0;
+        width: 33%;
+        img {
+          width: 70%;
+          margin: auto;
+        }
+      }
+      .footer-rs-ml {
+        background: $beige;
+        border-radius: 15px;
+        color: $blanc;
+        font-size: 10px;
+        line-height: 30px;
+        text-align: center;
+        padding: 5px 0;
+        width: 66%;
+      }
+    }
+  }
+}
+
+/*------------------------------plugin--------------------------------*/
+
+button {
+  position: absolute;
+  top: -20px;
+  &::before {
+    content: '\f359';
+    font-family: "Font Awesome 5 Free";
+    font-size: 2.5rem;
+    color: $beige;
+  }
+  &.owl-prev {
+    left: $marge;
+    font-size: 0;
+  }
+  &.owl-next {
+    right: $marge;
+    font-size: 0;
+    &::before {
+      content: '\f35a';
+    }
+  }
+}

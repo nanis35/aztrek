@@ -1,0 +1,58 @@
+.container {
+    max-width: $max-width;
+    padding: 0 10px;
+}
+
+.burger {
+    display: none;
+}
+
+
+.header-logo {
+    .logo {
+      margin: auto;
+      padding-top: 10em;
+      opacity: 85%;
+      width: 80%;
+    }
+  }
+
+.footer {
+    margin: 0 auto;
+    width: 40%;
+    .logo-footer {
+        margin: 15px auto;
+        width: 40%;
+        img {
+            width: 80%;
+        }
+    }
+    .footer-rs {
+        width: 60%;
+        .footer-rs-2 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            a {
+                margin: 0.5rem 0 0;
+                padding: 0;
+                width: 33%;
+                img {
+                    width: 70%;
+                    margin: auto;
+                }
+            }
+            .footer-rs-ml {
+                background: $beige;
+                border-radius: 15px;
+                color: $blanc;
+                font-size: 10px;
+                line-height: 30px;
+                text-align: center;
+                padding: 5px 0;
+                width: 66%;
+            }
+        }
+    }
+}

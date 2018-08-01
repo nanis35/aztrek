@@ -4,23 +4,20 @@
  * Retourne la liste des projets
  * @return array Liste des projets
  */
-function getAllProjects(int $limit = 999): array {
+function getAllSejour(int $limit = 999): array {
     global $connexion;
 
     $query = "SELECT
-                projet.*,
-                DATE_FORMAT(projet.date_debut, '%d/%m/%Y') AS date_debut_format,
-                REPLACE(FORMAT(projet.prix, 'currency', 'de_DE'), '.', ' ') AS prix_format,
-                categorie.libelle AS categorie,
+                sejour.*,
+                DATE_FORMAT(sejour.date_debut, '%d/%m/%Y') AS date_debut_format,
+                REPLACE(FORMAT(sejour.prix, 'currency', 'de_DE'), '.', ' ') AS prix_format,
+                pays.libelle AS categorie,
                 COUNT(participation.id) AS nb_participants,
-                IFNULL(SUM(participation.montant), 0) AS montant_participations,
-                AVG(notation.note) AS note_moyenne
-            FROM projet
-            INNER JOIN categorie ON categorie.id = projet.categorie_id
-            LEFT JOIN participation ON participation.projet_id = projet.id
-            LEFT JOIN notation ON notation.projet_id = projet.id
-            GROUP BY projet.id
-            ORDER BY projet.date_debut DESC
+            FROM sejour
+            INNER JOIN pays ON pays.id = sejour.pays_id
+            GROUP BY sejour.id
+            ORDER BY sejour.date_debut DESC
+            ORDER BY sejour.date_fin DESC
             LIMIT :limit;";
 
     $stmt = $connexion->prepare($query);
@@ -30,7 +27,7 @@ function getAllProjects(int $limit = 999): array {
     return $stmt->fetchAll();
 }
 
-function getProject(int $id): array {
+function get(int $id): array {
     global $connexion;
 
     $query = "SELECT

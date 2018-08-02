@@ -9,7 +9,7 @@ $list_pays = getAllEntities("pays");
 require_once '../../layout/header.php';
 ?>
 
-<h1>Modifier un projet</h1>
+<h1>Modifier un séjour</h1>
 
 <form action="update_query.php" method="post" enctype="multipart/form-data">
     <div class="form-group row">
@@ -24,11 +24,12 @@ require_once '../../layout/header.php';
             <input type="number" name="duree" value="<?php echo $sejour["duree"]; ?>" class="form-control" placeholder="duree">
         </div>
     </div>
-     <div class="form-group row">
+    <div class="form-group row">
         <label class="col-sm-2 col-form-label">Niveau</label>
         <div class="col-sm-10">
             <input type="number" name="niveau" value="<?php echo $sejour["niveau"]; ?>" class="form-control" placeholder="niveau">
         </div>
+    </div>
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Photo</label>
         <div class="col-sm-1">

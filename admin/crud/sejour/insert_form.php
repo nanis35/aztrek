@@ -45,19 +45,19 @@ require_once '../../layout/header.php';
             <textarea name="description_courte" class="form-control"></textarea>
         </div>
     </div>
-        <div class="form-group row">
+    <div class="form-group row">
         <label class="col-sm-2 col-form-label">Description_longue</label>
         <div class="col-sm-10">
             <textarea name="description_longue" class="form-control"></textarea>
         </div>
-    </div
+    </div>
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Pays</label>
         <div class="col-sm-10">
             <select name="pays_id" class="form-control">
                 <?php foreach ($list_pays as $pays) : ?>
                     <option value="<?php echo $pays["id"]; ?>">
-                        <?php echo $pays["libelle"]; ?>
+                        <?php echo $pays["nom"]; ?>
                     </option>
                 <?php endforeach; ?>
             </select>

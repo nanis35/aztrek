@@ -6,4 +6,4 @@ $id = $_POST["id"];
 
 deleteEntity("depart", $id);
 
-header("Location: index.php");
+header("Location: index .php");

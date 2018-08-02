@@ -45,6 +45,7 @@ require_once __DIR__ . '/../security.php';
                             <?php display_nav_item(SITE_ADMIN, "Dashboard", "fa-home", true); ?>
                             <?php display_nav_item(SITE_ADMIN . "crud/pays/", "Pays", "fa-flag"); ?>
                             <?php display_nav_item(SITE_ADMIN . "crud/sejour/", "Séjours", "fa-globe"); ?>
+                            <?php display_nav_item(SITE_ADMIN . "crud/depart/", "Départs", "fa-plane"); ?>
                         </ul>
 
                     </div>

@@ -4,6 +4,6 @@ require_once '../../../model/database.php';
 
 $id = $_POST["id"];
 
-deleteEntity("sejour", $id);
+deleteEntity("depart", $id);
 
 header("Location: index.php");

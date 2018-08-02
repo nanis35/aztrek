@@ -16,21 +16,21 @@ require_once '../../layout/header.php';
         </div>
     </div>
     <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Image</label>
+        <label class="col-sm-2 col-form-label">Photo</label>
         <div class="col-sm-10">
-            <input type="file" name="image" accept="images/*" class="form-control">
+            <input type="file" name="photo" accept="images/*" class="form-control">
         </div>
     </div>
     <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Date de début</label>
+        <label class="col-sm-2 col-form-label">Niveau</label>
         <div class="col-sm-10">
-            <input type="date" name="date_debut" class="form-control">
+            <input type="number" name="niveau" class="form-control">
         </div>
     </div>
     <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Date de fin</label>
+        <label class="col-sm-2 col-form-label"> Duree</label>
         <div class="col-sm-10">
-            <input type="date" name="date_fin" class="form-control">
+            <input type="number" name="duree" class="form-control">
         </div>
     </div>
     <div class="form-group row">
@@ -40,11 +40,17 @@ require_once '../../layout/header.php';
         </div>
     </div>
     <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Description</label>
+        <label class="col-sm-2 col-form-label">Description_courte</label>
         <div class="col-sm-10">
-            <textarea name="description" class="form-control"></textarea>
+            <textarea name="description_courte" class="form-control"></textarea>
         </div>
     </div>
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Description_longue</label>
+        <div class="col-sm-10">
+            <textarea name="description_longue" class="form-control"></textarea>
+        </div>
+    </div
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Pays</label>
         <div class="col-sm-10">

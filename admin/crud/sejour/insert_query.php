@@ -3,21 +3,21 @@ require_once '../../security.php';
 require_once '../../../model/database.php';
 
 // Récupération des données du formulaire
-$titre = $_POST["titre"];
+$titre = $_POST["nom"];
 $date_debut = $_POST["date_debut"];
 $date_fin = $_POST["date_fin"];
-$prix = $_POST["prix"];
 $description = $_POST["description"];
-$categorie_id = $_POST["categorie_id"];
+$duree = $_POST["duree"];
+$niveau = $_POST["niveau"];
 
 // Upload de l'image
-$image = $_FILES["image"]["name"];
-$tmp = $_FILES["image"]["tmp_name"];
+$photo = $_FILES["photo"]["nom"];
+$tmp = $_FILES["photo"]["tmp_nom"];
 
-move_uploaded_file($tmp, "../../../uploads/" . $image);
+move_uploaded_file($tmp, "../../../uploads/" . $photo);
 
 // Enregistrement en base de données
-insertProjet($titre, $image, $date_debut, $date_fin, $prix, $description, $categorie_id);
+insertProjet($nom, $niveau, $photo, $date_debut, $date_fin, $description, $duree);
 
 // Redirection vers la liste
 header("Location: index.php");

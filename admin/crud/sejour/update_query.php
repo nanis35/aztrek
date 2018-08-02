@@ -1,4 +1,4 @@
- <?php
+<?php
 
 require_once '../../security.php';
 require_once '../../../model/database.php';
@@ -6,25 +6,25 @@ require_once '../../../model/database.php';
 // Récupération des données du formulaire
 $id = $_POST["id"];
 $nom = $_POST["nom"];
-$date_debut = $_POST["date_debut"];
-$date_fin = $_POST["date_fin"];
+$niveau = $_POST["niveau"];
+$photo = $_POST["photo"];
 $duree = $_POST["duree"];
-$prix = $_POST["prix"];
-$description = $_POST["description"];
-
+$description_courte = $_POST["description_courte"];
+$description_longue = $_POST["description_longue"];
+    
 // Upload de l'image
-if ($_FILES["image"]["error"] == UPLOAD_ERR_NO_FILE) {
-    $sejour = getOneEntity("projet", $id);
-    $image = $sejour["image"];
+if ($_FILES["photo"]["error"] == UPLOAD_ERR_NO_FILE) {
+    $sejour = getOneEntity("sejour", $id);
+    $photo = $sejour["photo"];
 } else {
-    $image = $_FILES["image"]["name"];
-    $tmp = $_FILES["image"]["tmp_name"];
+    $photo = $_FILES["photo"]["nom"];
+    $tmp = $_FILES["photo"]["tmp_nom"];
 
-    move_uploaded_file($tmp, "../../../uploads/" . $image);
+    move_uploaded_file($tmp, "../../../uploads/" . $photo);
 }
 
 // Enregistrement en base de données
-updateSejour($id, $nom, $image, $date_debut, $date_fin, $prix, $description, $duree);
+updateSejour($id, $nom, $photo, $niveau, $description_courte, $description_courte, $duree);
 
 // Redirection vers la liste
 header("Location: index.php");
